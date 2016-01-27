@@ -14,9 +14,9 @@ eventsApp.filter('durations', function(){
 eventsApp.filter('levels', function(){
     return function(level){
         switch(level){
-            case "Introductory": return "https://rogueamoeba.com/fission/images/featureicons/easy.png";
-            case "Intermediate": return "http://www.summertown.co.uk/media/t/step2.gif";
-            case "Advanced": return "https://pilatesology-pilatesologyinc.netdna-ssl.com/wp-content/themes/pilatesology/images/fast.gif";
+            case "introductory": return "https://rogueamoeba.com/fission/images/featureicons/easy.png";
+            case "intermediate": return "http://www.summertown.co.uk/media/t/step2.gif";
+            case "advanced": return "https://pilatesology-pilatesologyinc.netdna-ssl.com/wp-content/themes/pilatesology/images/fast.gif";
         }
     }
 })

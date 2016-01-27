@@ -78,6 +78,10 @@ select, textarea {
 .blue{
     color:blue;
 }
+.levels{
+    margin-left: -32px;
+    margin-top: 97px;
+}
+
 [ng\:cloak], [ng-cloak], [data-ng-cloak],[x-ng-cloack], .ng-cloak, .x-ng-cloak{
     display:none;
-
