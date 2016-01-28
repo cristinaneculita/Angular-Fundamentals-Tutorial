@@ -1,21 +1,21 @@
 'use strict';
 
 eventsApp.controller('EventController', 
-    function EventController($scope, eventData, $log,$anchorScroll, $cookieStore){
+    function EventController($scope, eventData, $log,$anchorScroll, $cookieStore, $routeParams, $route){
         $scope.snippet='<span style="color:red"> hi there </span>';
         $scope.boolValue = true;
         $scope.mystyle={color:'red'};
         $scope.myclass="blue";
         $scope.buttonDisabled =true;
-        eventData.getEvent()
-            .$promise
-            .then(function(event){
-                  populateVotes(event.sessions);
-                  $scope.event=event;
-                })
-            .catch(function(response){});
-            
-        
+        // eventData.getEvent($routeParams.eventId)
+        //     .$promise
+        //     .then(function(event){
+        //          // populateVotes(event.sessions);
+        //           $scope.event=event;
+        //         })
+        //     .catch(function(response){});
+        //     
+        $scope.event = $route.current.locals.event;
         $scope.upVoteSession = function(session){
            modifyCookie(session, 1);
         }

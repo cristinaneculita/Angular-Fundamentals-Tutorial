@@ -15,9 +15,9 @@ eventsApp.factory('eventData', function($resource){
     
     
     return {
-        getEvent: function(){
+        getEvent: function(eventId){
             //return $http({method:'GET', url:'/data/event/1'});
-            return resource.get({id:2});
+            return resource.get({id:eventId});
         },
         save: function(event){
   
@@ -26,6 +26,9 @@ eventsApp.factory('eventData', function($resource){
                 return resource.save(event);
             });
             
+        },
+        getAllEvents: function(){
+            return resource.query();
         }
     }
 });
