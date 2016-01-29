@@ -6,31 +6,17 @@
         <base href="/" />
         <link rel="stylesheet" href="/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="/css/app.css"/>
-        <link rel="stylesheet" href="/lib/jquery-ui-1.11.4.custom/jquery-ui.css"/>
         <link rel="shortcut icon" href="/favicon1.ico">
     </head>
     <body ng-cloak>
-        <div class="container">
-             <div class ="navbar" ng-controller="MainMenuController">
-                <div class="navbar-inner">
-                    <ul class="nav">
-                         <!--<li><a href="newEvent"> Create Event</a></li>-->
-                         <li><a href="#" ng-click="createEvent()"> Create Event</a></li>
-                         <li><a href="events"> Events </a></li>
-                         
-                         <li><a href="editProfile"> Edit Profile</a></li>
-                         <li><a href="/CacheSample.html"> Cache Sample</a></li>
-                         <li><a href="/CompileSample.html"> Compile Sample</a></li>
-                         <li><a href="/About"> About</a></li>
-                    </ul>
-                </div>
-            </div>
-
-           <ng-view>
-               
-           </ng-view>
-           
+       
+        <div>
+            <greeting hindi finnish/>
         </div>
+        Text to repeat: <input type="text" ng-model="text"/>
+        <div repeat-x="5" text='{{text}}'>{{text}}</div>
+        
+       
         <script src="/lib/jquery.min.js"></script>
         <script src="/lib/underscore-1.4.4.min.js"></script>
         <script src="/lib/bootstrap.min.js"></script>
@@ -39,31 +25,24 @@
         <script src="/lib/angular/angular-sanitize.js"></script>
         <script src="/lib/angular/angular-cookies.js"></script>
         <script src="/lib/angular/angular-route.js"></script>
-        <!--<script src="/lib/jquery-ui-1.11.4.custom/jquery-ui.js"></script>-->
         <script src="/js/app.js"></script>
         <script src="/js/controllers/EventController.js"></script>
         <script src="/js/controllers/EditEventController.js"></script>
         <script src="/js/controllers/EditProfileController.js"></script>
         <script src="/js/controllers/EventListController.js"></script>
         <script src="/js/controllers/MainMenuController.js"></script>
-
+        <script src="/js/controllers/SampleDirectiveController.js"></script>
         <script src="/js/services/EventData.js"></script>
         <script src="/js/services/GravatarUrlBuilder.js"></script>
         <script src="/js/services/UserData.js"></script>
-        <script src="/js/services/calendarHelper.js"></script>
         <script src="/js/filters.js"></script>
         <script src="/js/directives/mySample.js"></script>
         <script src="/js/directives/eventThumbnail.js"></script>
         <script src="/js/directives/upvote.js"></script>
         <script src="/js/directives/datekeys.js"></script>
         <script src="/js/directives/gravatar.js"></script>
-        <script src="/js/directives/collapsible.js"></script>
-        <script src="/js/directives/datepicker.js"></script>
-        <script src="/js/directives/focus.js"></script>
-        <script src="/js/directives/clickedOnEnter.js"></script>
-        <script src="/js/directives/sessionThumbnail.js"></script>
-        <script src="/js/directives/eventDetails.js"></script>
-        <script src="/js/directives/dateInput.js"></script>
+        <script src="/js/directives/greeting.js"></script>
+        <script src="/js/directives/repeatx.js"></script>
         
     </body>
 </html>

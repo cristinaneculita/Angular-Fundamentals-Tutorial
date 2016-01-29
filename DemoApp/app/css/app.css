@@ -83,5 +83,8 @@ select, textarea {
     margin-top: 97px;
 }
 
+
+
 [ng\:cloak], [ng-cloak], [data-ng-cloak],[x-ng-cloack], .ng-cloak, .x-ng-cloak{
     display:none;
+

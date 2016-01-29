@@ -1,17 +1,22 @@
 
-            <div style="padding-left:20px; padding-right: 20px">
+            <div style="padding-left:20px; padding-right: 20px" clicked-on-enter>
                 <div class="container">
                      <h1>New Event</h1>
                      <hr/>
                      <form name ="newEventForm">
                         <fieldset >
                             <label for="eventName">Event Name:</label>
-                            <input id="eventName" type="text" ng-model="event.name" name="eventName" required placeholder="Name of your event..." />
+                            <input id="eventName" type="text" ng-model="event.name" name="eventName"  placeholder="Name of your event..." focus/>
                             <span ng-if="newEventForm.eventName.$error.required && newEventForm.eventName.$dirty"> Field is required</span>
                             <label for="eventDate">Event Date:</label>
-                            <input id="eventDate" type="text"  ng-model="event.date" name="eventDate" required ng-pattern="/\d\d/\d\d/\d\d\d\d/" placeholder="format (mm/dd/yyyy)..." />
-                              <span ng-if="newEventForm.eventDate.$error.required && newEventForm.eventDate.$dirty"> Field is required</span>
-                              <span ng-if="newEventForm.eventDate.$error.pattern && newEventForm.eventDate.$dirty"> Wrong format</span>
+                            <div style="position:relative">
+                                <date-input my-input="event.date"/>
+                            
+                                <!--<input id="eventDate" type="text"  ng-model="event.date" name="eventDate"date-picker ng-pattern="/\d\d/\d\d/\d\d\d\d/" placeholder="format (mm/dd/yyyy)..." />-->
+                                <!--<span ng-if="newEventForm.eventDate.$error.required && newEventForm.eventDate.$dirty"> Field is required</span>
+                                <span ng-if="newEventForm.eventDate.$error.pattern && newEventForm.eventDate.$dirty"> Wrong format</span>-->
+                                <!--<date-picker for="eventDate"/>-->
+                            </div>
                             <label for="eventTime">Event Time:</label>
                             <input id="eventTime" type="text"  ng-model="event.time"placeholder="start and end time..." />
                             <label for="eventLocation">Event Location:</label>
@@ -22,15 +27,15 @@
                             <label for="eventImageUrl">Image:</label>
                             <input id="eventImageUrl" type="url" class="input-xlarge"  ng-model="event.imageUrl" placeholder="url of image..." />
                           </fieldset>
-                          
+                             
                            <img ng-src="{{event.imageUrl}}" src="" />
                            <br />
                            <br />
                             
-                           <button type="submit"  ng-click="saveEvent(event,newEventForm)" class="btn btn-primary">Save</button>
+                           <button type="submit"  id="saveButton" ng-click="saveEvent(event,newEventForm)" class="btn btn-primary">Save</button>
                            <button type="button" ng-click="cancelEdit()" class="btn btn-default">Cancel</button>
                      </form>
                 </div>
             </div>
-        </div>
+
         

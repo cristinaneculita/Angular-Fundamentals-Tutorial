@@ -41,6 +41,13 @@ var eventsApp = angular.module('eventsApp', ['ngSanitize','ngResource', 'ngCooki
             }
                  
         )
+         $routeProvider.when('/sampleDirective',
+            {
+                templateUrl:'templates/SampleDirective.html',
+                //controller: 'SampleDirectiveController'
+            }
+                 
+        )
           $routeProvider.when('/About',
             {
                 template:'This is just a great example of routing'

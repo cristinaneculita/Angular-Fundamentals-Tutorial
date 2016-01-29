@@ -5,6 +5,7 @@ eventsApp.controller('EditEventController',
         $scope.saveEvent=function(event,newEventForm){
             if(newEventForm.$valid){
                  eventData.save(event);  
+                 alert("saved"+event.date);
             }
         };
         $scope.cancelEdit=function(){

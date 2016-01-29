@@ -1,0 +1,47 @@
+
+             <div  style="padding-left:20px; padding-right:20px">
+                 <img ng-src="{{event.imageUrl}}" alt="event.name"/>
+                 <!--<button type="button" class="btn btn-primary" ng-click="scrollToSession()"> Scroll</button>-->
+                 <div class="row">
+                     <div class="span11">
+                         <h2 ng-class="myclass"> {{event.name |uppercase}} </h2>
+                     </div>
+                 </div>
+              
+                 <!--<h2 ng-show="boolValue"> Show This</h2>
+                 <h2 ng-hide="boolValue"> Hide This</h2>-->
+                 
+                 <!--<button class="btn" ng-disabled="buttonDisabled" > Disabled</button>-->
+                 <div class="row">
+                     <div class="span3">
+                         <div> <strong> Date: </strong>{{event.date}}</div>
+                         <div> <strong> Time: </strong>{{event.time}}</div>
+                     </div>
+                 
+                    <div class="span4">
+                        <address>
+                            <strong>Address:</strong><br />
+                                    {{event.location.address}}<br />
+                                    {{event.location.city}}, {{event.location.province}}
+                            </address>
+                    </div>
+                  </div>
+                  
+                  
+                 <!--<div>
+                     {{3.1415592 |number:2}}
+                 </div>-->
+                  <hr/>
+                  <h3>Sessions</h3>
+                  <ul class="thumbnails">
+                      
+                      <li ng-repeat="session in event.sessions" class="span11" id="session{{session.id}}">
+                         
+                          <session-thumbnail my-session="session" />
+                            
+                      </li>
+                      
+                  </ul>
+             </div>   
+
+      
